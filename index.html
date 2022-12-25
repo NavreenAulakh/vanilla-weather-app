@@ -15,24 +15,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="input-group mb-3">
+      <div class="input-group mb-3" class="city-input">
         <input
           type="text"
           class="form-control"
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
+          placeholder="Enter your city"
+          aria-label="Enter your city"
           aria-describedby="basic-addon2"
         />
 
-        <button class="btn btn-outline-secondary" type="button">Button</button>
+        <button class="btn btn-outline-secondary" type="button">Enter</button>
       </div>
 
       <div class="row">
         <div class="col-sm-8">
           <span id="current-city-name"> Brampton </span>
           <ul>
-            <li id="todays-date">Thursday</li>
-            <li id="current-time">7:00</li>
+            <li id="todays-date">
+              Thursday <span id="current-time"> 7:00 </span>
+            </li>
+            <li>Wind: 23 km/h</li>
+            <li>Humidity: 21%</li>
           </ul>
         </div>
         <div class="col-sm-4" id="main-temp-display">
@@ -42,33 +45,38 @@
       </div>
       <h1 id="city-name"></h1>
 
-      <div class="row" id="nextWeeksWeather">
+      <div class="row" id="next-week-weather">
         <div class="col-sm">
           Tue <br />
+          ⛈️ <br />
           -9
         </div>
         <div class="col-sm">
           Wed <br />
+          ⛈️ <br />
           -9
         </div>
         <div class="col-sm">
           Thurs <br />
+          ⛈️ <br />
           -10
         </div>
         <div class="col-sm">
           Fri <br />
+          ⛈️ <br />
           -12
         </div>
         <div class="col-sm">
           Sat <br />
+          ⛈️ <br />
           3
         </div>
       </div>
-      <small>
-        This project was coded by Navreen Aulakh and is open-sourced on GitHub
-        and hosted on Netlify
-      </small>
     </div>
+    <small>
+      This project was coded by Navreen Aulakh and is open-sourced on GitHub and
+      hosted on Netlify
+    </small>
 
     <script src="src/index.js"></script>
   </body>

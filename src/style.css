@@ -3,19 +3,10 @@ body {
   background: whitesmoke;
 }
 
-#nextWeeksWeather {
-  padding: 5px;
-  border-top: 1px;
-}
-
-.nextWeeksWeather:hover {
-  background: yellowgreen;
-}
-
 .container {
   background: aliceblue;
   width: 60%;
-  margin: 50px 0;
+  margin: 50px 10px;
   padding: 40px;
   border: 1px lightgrey solid;
   border-radius: 5px;
@@ -35,4 +26,22 @@ ul {
 #current-city-name {
   font-size: 30px;
   font-weight: 200;
+}
+
+#next-week-weather {
+  background: #dcedff;
+  text-align: center;
+  border-radius: 5px;
+  border-top: solid lightgrey 1px;
+}
+
+.col-sm {
+  padding: 15px;
+  transition: all 200ms ease-in-out;
+  background: #dcedff;
+}
+
+.col-sm:hover {
+  background: white;
+  border-radius: 5px;
 }

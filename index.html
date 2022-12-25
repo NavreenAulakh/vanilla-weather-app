@@ -26,26 +26,32 @@
           aria-describedby="basic-addon2"
         />
 
-        <button class="btn btn-outline-secondary" type="button">Enter</button>
+        <button
+          class="btn btn-outline-secondary"
+          id="submit-button"
+          type="button"
+        >
+          Enter
+        </button>
       </div>
 
       <div class="row">
         <div class="col-sm-8">
-          <span id="current-city-name"> Brampton </span>
+          <span id="city-name"> Tester</span>
           <ul>
             <li id="todays-date">
               Thursday <span id="current-time"> 7:00 </span>
             </li>
-            <li>Wind: 23 km/h</li>
-            <li>Humidity: 21%</li>
+            <li>Wind: <span id="wind">23</span> km/h</li>
+            <li>Humidity: <span id="humidity">21</span>%</li>
           </ul>
         </div>
         <div class="col-sm-4" id="main-temp-display">
           <span id="main-temp-emoji"> ❄️</span>
-          <span id="main-temp">10</span> C|F
+          <span id="main-temp"></span> C|F <br />
+          <span id="weather-description"></span>
         </div>
       </div>
-      <h1 id="city-name"></h1>
 
       <div class="row" id="next-week-weather">
         <div class="col-sm">

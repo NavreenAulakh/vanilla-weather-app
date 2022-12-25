@@ -22,12 +22,18 @@ function displayTemp(response) {
   let wind = document.querySelector("#wind");
   let description = document.querySelector("#weather-description");
   let date = document.querySelector("#todays-date");
+  let weatherIcon = document.querySelector("#weather-icon");
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   cityDisplay.innerHTML = response.data.name;
   humidity.innerHTML = Math.round(response.data.main.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
   description.innerHTML = response.data.weather[0].description;
   date.innerHTML = formatDate(response.data.dt * 1000);
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 let unit = "metric";

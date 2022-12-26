@@ -41,7 +41,7 @@
 
       <div class="row">
         <div class="col-sm-8">
-          <span id="city-name"> </span>
+          <span id="city-name"> Brampton</span>
           <ul>
             <li id="todays-date">
               Thursday <span id="current-time"> 7:00 </span>
@@ -58,13 +58,16 @@
               alt=""
             />
           </span>
-          <span id="main-temp"></span> <a href="" id="celsius"> C</a>|<a
-            href=""
-            id="farenheit"
-          >
-            F</a
-          >
-          <br />
+          <span id="main-temp">3</span>
+          <span id="temp-units">
+            <a href="#" id="celsius" class="active"> °C</a>|<a
+              href="#"
+              id="farenheit"
+            >
+              °F</a
+            >
+            <br />
+          </span>
           <span id="weather-description"></span>
         </div>
       </div>
@@ -97,10 +100,10 @@
         </div>
       </div>
     </div>
-    <small>
+    <p class="footer">
       This project was coded by Navreen Aulakh and is open-sourced on GitHub and
       hosted on Netlify
-    </small>
+    </p>
 
     <script src="src/index.js"></script>
   </body>

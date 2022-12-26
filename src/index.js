@@ -22,6 +22,9 @@ function displayTemp(response) {
   let description = document.querySelector("#weather-description");
   let date = document.querySelector("#todays-date");
   let weatherIcon = document.querySelector("#weather-icon");
+
+  tempinCelsius = Math.round(response.data.main.temp);
+
   mainTemp.innerHTML = Math.round(response.data.main.temp);
   cityDisplay.innerHTML = response.data.name;
   humidity.innerHTML = Math.round(response.data.main.humidity);
@@ -55,3 +58,26 @@ function displayTemp(response) {
 
 let submitButton = document.querySelector("#submit-button");
 submitButton.addEventListener("click", submitCity);
+
+// Temp conversion
+
+function displayFarenheit() {
+  let mainTempDisplay = document.querySelector("#main-temp");
+  mainTempDisplay.innerHTML = Math.round(tempinCelsius * 9) / 5 + 32;
+  farenheitClick.classList.remove("active");
+  celsiusClick.classList.add("active");
+}
+
+function displayCelsius() {
+  let mainTempDisplay = document.querySelector("#main-temp");
+  mainTempDisplay.innerHTML = Math.round(tempinCelsius);
+  farenheitClick.classList.add("active");
+  celsiusClick.classList.remove("active");
+}
+
+let farenheitClick = document.querySelector("#farenheit");
+farenheitClick.addEventListener("click", displayFarenheit);
+
+let tempinCelsius = null;
+let celsiusClick = document.querySelector("#celsius");
+celsiusClick.addEventListener("click", displayCelsius);

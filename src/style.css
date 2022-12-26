@@ -4,10 +4,10 @@ body {
 }
 
 .container {
-  background: aliceblue;
-  width: 60%;
-  margin: 50px 10px;
-  padding: 40px;
+  background: #f0f8ff;
+  max-width: 60%;
+  margin: 50px 10px 5px 10px;
+  padding: 40px 40px 40px 0px;
   border: 1px lightgrey solid;
   border-radius: 5px;
 }
@@ -21,6 +21,16 @@ ul {
 #main-temp-display {
   font-size: 40px;
   font-weight: 400;
+}
+
+.active {
+  color: black;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: black;
+  text-decoration: none;
 }
 
 #city-name {
@@ -41,7 +51,30 @@ ul {
   background: #dcedff;
 }
 
+#todays-date {
+  font-weight: bolder;
+}
 .col-sm:hover {
   background: white;
   border-radius: 5px;
+}
+
+#temp-units {
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  top: -12px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #f0f8ff;
+}
+
+.footer {
+  text-align: center;
+  padding: 0px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #808080;
 }

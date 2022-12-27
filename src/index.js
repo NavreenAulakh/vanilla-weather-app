@@ -14,6 +14,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {}
+
 function displayTemp(response) {
   let mainTemp = document.querySelector("#main-temp");
   let cityDisplay = document.querySelector("#city-name");
@@ -46,6 +48,7 @@ function displayTemp(response) {
     let apiKey = "34ae1065362d42545661451bda2b8a1f";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(displayTemp);
+    displayForecast();
   }
 
   function submitCity(event) {

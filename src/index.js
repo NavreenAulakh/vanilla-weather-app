@@ -14,7 +14,28 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {}
+function displayForecast() {
+  let forecastElement = document.querySelector("#next-week-weather");
+  forecastHTML = `<div class="row" id="next-week-weather">`;
+  let days = ["Mon", "Tues", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-sm">
+          <div class="weather-forecast-date">Sat</div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+          <div class="weather-forecast-temp">
+            <span class="max">10</span><span class="forecast-min">5</span>
+          </div>
+        </div>
+      </div>
+
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemp(response) {
   let mainTemp = document.querySelector("#main-temp");

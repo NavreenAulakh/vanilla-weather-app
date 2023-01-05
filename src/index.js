@@ -23,7 +23,7 @@ function formatForecastDay(timestamp) {
 }
 function displayForecast(response) {
   let forecastElement = document.querySelector("#next-week-weather");
-  forecastHTML = `<div class="row" id="next-week-weather">`;
+  forecastHTML = '<div class="row" id="next-week-weather">';
   let forecast = response.data.daily;
 
   forecast.forEach(function (forecastDay, index) {
@@ -37,13 +37,13 @@ function displayForecast(response) {
           )}</div>
           <img src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
-          }@2x.png" />
+          }@2x.png" class="forecast-icon"/>
           <div class="weather-forecast-temp">
-            <span class="max">${Math.round(
+            <span class="max" class="main-temp">${Math.round(
               forecastDay.temp.max
-            )}</span> <span class="forecast-min">${Math.round(
+            )}°</span> <span class="forecast-min" class="main-temp">${Math.round(
           forecastDay.temp.min
-        )}</span>
+        )}°</span>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 function displayTemp(response) {
-  let mainTemp = document.querySelector("#main-temp");
+  let mainTemp = document.querySelector(".main-temp");
   let cityDisplay = document.querySelector("#city-name");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
@@ -113,26 +113,3 @@ function displayTemp(response) {
 
 let submitButton = document.querySelector("#submit-button");
 submitButton.addEventListener("click", submitCity);
-
-// Temp conversion
-
-function displayFarenheit() {
-  let mainTempDisplay = document.querySelector("#main-temp");
-  mainTempDisplay.innerHTML = Math.round(tempinCelsius * 9) / 5 + 32;
-  farenheitClick.classList.remove("active");
-  celsiusClick.classList.add("active");
-}
-
-function displayCelsius() {
-  let mainTempDisplay = document.querySelector("#main-temp");
-  mainTempDisplay.innerHTML = Math.round(tempinCelsius);
-  farenheitClick.classList.add("active");
-  celsiusClick.classList.remove("active");
-}
-
-let farenheitClick = document.querySelector("#farenheit");
-farenheitClick.addEventListener("click", displayFarenheit);
-
-let tempinCelsius = null;
-let celsiusClick = document.querySelector("#celsius");
-celsiusClick.addEventListener("click", displayCelsius);

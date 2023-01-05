@@ -3,6 +3,16 @@ body {
   background: whitesmoke;
 }
 
+ul {
+  list-style: none;
+  position: relative;
+  left: -30px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .container {
   background: #f0f8ff;
   opacity: 0.75;
@@ -11,17 +21,6 @@ body {
   border: 1px lightgrey solid;
   border-radius: 5px;
   max-width: 70%;
-}
-
-ul {
-  list-style: none;
-  position: relative;
-  left: -30px;
-}
-
-#main-temp-display {
-  font-size: 40px;
-  font-weight: 400;
 }
 
 .active {
@@ -34,9 +33,41 @@ ul {
   text-decoration: none;
 }
 
+.col-sm {
+  padding: 15px;
+  transition: all 200ms ease-in-out;
+  background: #dcedff;
+}
+
+.col-sm:hover {
+  background: white;
+  border-radius: 5px;
+}
+
+.dark-mode {
+  background-color: #003366;
+}
+
+.forecast-max {
+  color: #5a5a5a;
+}
+
+.footer {
+  text-align: center;
+  padding: 0px;
+  margin: 0 auto;
+  font-size: 10px;
+  color: #808080;
+}
+
 #city-name {
   font-size: 30px;
   font-weight: 200;
+}
+
+#main-temp-display {
+  font-size: 40px;
+  font-weight: 400;
 }
 
 #next-week-weather {
@@ -46,18 +77,8 @@ ul {
   border-top: solid lightgrey 1px;
 }
 
-.col-sm {
-  padding: 15px;
-  transition: all 200ms ease-in-out;
-  background: #dcedff;
-}
-
 #todays-date {
   font-weight: bolder;
-}
-.col-sm:hover {
-  background: white;
-  border-radius: 5px;
 }
 
 #celsius {
@@ -73,26 +94,7 @@ ul {
 #celsius:hover {
   cursor: pointer;
 }
-a:link {
-  text-decoration: none;
-}
-
-.footer {
-  text-align: center;
-  padding: 0px;
-  margin: 0 auto;
-  font-size: 10px;
-  color: #808080;
-}
 
 #weather-description {
   text-transform: capitalize;
-}
-
-.dark-mode {
-  background-color: #003366;
-}
-
-.forecast-max {
-  color: #5a5a5a;
 }

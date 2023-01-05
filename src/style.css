@@ -5,12 +5,12 @@ body {
 
 .container {
   background: #f0f8ff;
-  opacity: 0.9;
-  max-width: 60%;
-  margin: 50px 10px 5px 10px;
-  padding: 40px 40px 40px 0px;
+  opacity: 0.75;
+  margin: 50px 20px 5px 20px;
+  padding: 60px 100px 0px 100px;
   border: 1px lightgrey solid;
   border-radius: 5px;
+  max-width: 50%;
 }
 
 ul {
@@ -60,13 +60,19 @@ ul {
   border-radius: 5px;
 }
 
-#temp-units {
+#celsius {
+  color: black;
+  padding: 0px;
+  margin: 0px;
   font-size: 20px;
   text-decoration: none;
   position: relative;
   top: -12px;
 }
 
+#celsius:hover {
+  cursor: pointer;
+}
 a:link {
   text-decoration: none;
 }
@@ -75,10 +81,18 @@ a:link {
   text-align: center;
   padding: 0px;
   margin: 0 auto;
-  font-size: 12px;
+  font-size: 10px;
   color: #808080;
 }
 
 #weather-description {
   text-transform: capitalize;
+}
+
+.dark-mode {
+  background-color: #003366;
+}
+
+.forecast-max {
+  color: #5a5a5a;
 }

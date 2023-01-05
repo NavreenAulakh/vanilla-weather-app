@@ -1,9 +1,15 @@
+// Get main time
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
+
+  if (hours > 18 || hours < 6) {
+    nightmode();
+  }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -23,9 +29,8 @@ function formatForecastDay(timestamp) {
 }
 function displayForecast(response) {
   let forecastElement = document.querySelector("#next-week-weather");
-  forecastHTML = '<div class="row" id="next-week-weather">';
   let forecast = response.data.daily;
-
+  let forecastHTML = '<div class="row">';
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 6) {
       forecastHTML =
@@ -39,13 +44,12 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png" class="forecast-icon"/>
           <div class="weather-forecast-temp">
-            <span class="max" class="main-temp">${Math.round(
+            <span class="forecast-max">${Math.round(
               forecastDay.temp.max
-            )}°</span> <span class="forecast-min" class="main-temp">${Math.round(
+            )}°</span> <span class="forecast-min">${Math.round(
           forecastDay.temp.min
         )}°</span>
           </div>
-        </div>
       </div>
 
   `;
@@ -53,6 +57,7 @@ function displayForecast(response) {
   });
 
   forecastHTML = forecastHTML + `</div>`;
+  console.log(forecastHTML);
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -109,6 +114,11 @@ function displayTemp(response) {
     let cityName = `${cityInput.value}`;
     searchForCity(cityName);
   }
+}
+
+function nightmode() {
+  let background = document.querySelector("body");
+  background.classList.add("dark-mode");
 }
 
 let submitButton = document.querySelector("#submit-button");

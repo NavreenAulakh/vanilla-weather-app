@@ -121,8 +121,8 @@ function nightmode() {
   background.classList.add("dark-mode");
 }
 
-//let submitButton = document.querySelector("#submit-button");
-//submitButton.addEventListener("click", submitCity);
+let submitButton = document.querySelector("#submit-button");
+submitButton.addEventListener("click", submitCity);
 
 //THIS DOES NOT WORK
 //let dataEntry = document.querySelector(".form-control");

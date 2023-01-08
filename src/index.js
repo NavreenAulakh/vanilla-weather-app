@@ -110,7 +110,7 @@ function displayTemp(response) {
 
   function submitCity(event) {
     event.preventDefault();
-    let cityInput = document.querySelector("#input-value");
+    let cityInput = document.querySelector("#city-input");
     let cityName = `${cityInput.value}`;
     searchForCity(cityName);
   }
@@ -121,9 +121,12 @@ function nightmode() {
   background.classList.add("dark-mode");
 }
 
-let submitButton = document.querySelector("#submit-button");
-submitButton.addEventListener("click", submitCity);
+//let submitButton = document.querySelector("#submit-button");
+//submitButton.addEventListener("click", submitCity);
 
 //THIS DOES NOT WORK
-let dataEntry = document.querySelector("#input-value");
-dataEntry.addEventListener("submit", submitCity);
+//let dataEntry = document.querySelector(".form-control");
+//dataEntry.addEventListener("submit", submitCity);
+
+let searchBar = document.querySelector("#city-search");
+searchBar.addEventListener("submit", submitCity);
